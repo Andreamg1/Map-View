@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blender Project Showcase</title>
+  <script type="module" src="https://threejs.org/build/three.module.js"></script>
+  <script type="module" src="https://threejs.org/examples/jsm/loaders/GLTFLoader.js"></script>
+</head>
+<body>
   <script type="module">
     import * as THREE from 'https://threejs.org/build/three.module.js';
     import { GLTFLoader } from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
@@ -20,7 +24,7 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
 
-    // Load glTF model
+    // Load Binary glTF model
     const loader = new GLTFLoader();
     loader.load('Extruded_version.glb', (gltf) => {
       scene.add(gltf.scene);
@@ -34,7 +38,5 @@
 
     animate();
   </script>
-</head>
-<body>
 </body>
 </html>
